@@ -20,8 +20,7 @@
 
 ::placeholder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
-    padding-left: 0px;
+    font-size: 12px;
   }
 
 html {
@@ -49,21 +48,13 @@ h1 {
     font-size: 4vw;
 }
 
-.cover  {
+.content  {
   height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.05)), to(rgba(0,0,0,0)));
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
   padding: 0px 50px 40px 50px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -91,7 +82,6 @@ h1 {
   z-index: 10;
   position: relative;
   width: 40vw;
-  
 }
 
 .flex-form > * {
@@ -111,13 +101,13 @@ input[type="search"] {
 }
 
 
-@media all and (max-width:800px) {
+@media (max-width:800px) {
   body {
-    font-size: 0.9rem;
+    font-size: 1em;
   }
 
   .flex-form {
-    width: 100%;
+    width: 70%;
   }
 
   input[type="search"] {
@@ -125,20 +115,18 @@ input[type="search"] {
   }
 
   .flex-form > * {
-    font-size: 0.9rem;
+    font-size: 1em;
   }
 
-  .cover {
+  .content {
     padding: 20px;
   }
 }
 
-@media all and (max-width:360px) {
-  header nav li{
-    margin: 0 10px;
-  }
+@media (max-width:360px) {
 
   .flex-form {
+    width: 70%;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -148,9 +136,5 @@ input[type="search"] {
 
   input[type="search"] {
     flex-basis: 0;
-  }
-
-  label {
-    display: none;
   }
 }
